@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC</title>
+    
+   <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        /* padding: 1rem; */
+        justify-content: space-between;
+        /* border: 1px solid seagreen; */
+        position: relative;
+    }
+    #upper-op ul{
+        display: flex;
+        list-style: none;
+        margin-left: 2.4rem;
+        align-items: center;
+    }
+    
+    #upper-op ul li a{
+        text-decoration: none;
+        color: inherit;
+        margin-left: 3rem;
+        }
+        #path{
+            width: 90%;
+            margin: auto;
+        }
+    #path>img{
+        width: 4rem;
+        height: 1.5rem;
+        
+    }
+    #kfc_logo{
+        width: 13rem;
+        height: 5rem;
+        /* border: 2px solid crimson; */
+    }
+    #section2{
+        display: flex;
+        /* border: 3px solid crimson; */
+        width: 30%;
+        margin-right: 4rem;
+        align-items: center;
+    }
+    #section2 ul{
+        display: flex;
+        list-style: none;
+        margin-left: 3rem;
+        gap: 2rem;
+    }
+    #section2>div {
+        /* border: 2px solid yellow; */
+        width: 60%;
+    }
+    #section2>div button{
+        padding: 1rem;
+        border-radius: 25px;
+        width: 70%;
+        background-color: crimson;
+        color: white;
+        border: none;
+        font-size: 16px;
+        font-family: sans-serif;
+    }
+    #section2 ul li img{
+        width: 2rem;
+        height: 2rem;
+    }
+    #location{
+        display: flex;
+       align-items: center;
+       justify-content: center;
+       color: aliceblue;
+       background-color: black;
+       height: 10vh;
+       gap: 20px;
+    }
+    #location img{
+        width: 2rem;
+        height: 2rem;
+    }
+    #location>p{
+        font-size: 18px;
+    }
+    #location:hover{
+         cursor: pointer;
+    }
+    #kfcimg>img{
+        width: 100%;
+    }
+    #path2{
+            width: 90%;
+            margin: auto;
+            margin-top: -5px;
+        }
+    #path2>img{
+        width: 5rem;
+        height: 1.5rem;
+        
+    }
+    .menu{
+       
+        width: 2rem;
+        height: 2rem;
+        
+     }
+     .close{
+        display: none;
+     }
+     #hamb{
+        display: none;
+     }
+     #heading{
+        border: 2px solid black;
+         width: 25%;
+         text-align: center;
+     }
+     @media (max-width: 1023px){
+     #heading {
+    width: 100%;
+    font-size: 12px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+     }
+    @media (max-width:900px){
+        
+        header #upper-op{
+            display: flex;
+            flex-direction:column;
+            min-width: 80%;
+            top: 0;
+            position: absolute;
+            left: -85%;
+            height: 100vh;
+            margin-top: 40px;
+            background-color: white;
+            align-items: flex-start;
+        }
+        header #upper-op.active{
+            display: flex;
+            flex-direction:column;
+            min-width: 80%;
+            top: 0;
+            position: absolute;
+            left: 85%;
+            height: 100vh;
+            margin-top: 40px;
+            background-color: white;
+            align-items: flex-start;
+        }
+        /* #upper-op ul .active{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            font-size: 25px;
+             margin-top: 40px;
+        } */
+        #upper-op .close .active{
+            width: 3rem;
+            height: 3rem;
+        }
+        #hamb{
+            display: block;
+        }
+        #btn1{
+            display: none;
+        }
+        #mainlogo{
+            display: none;
+        }
+       
+        
+    }
+   </style>
+</head>
+<body>
+    <div id="path">
+     <img src="./images/kfc.png" alt="">
+    </div>
+    <header>
+        <div id="hamb"><ion-icon name="menu-outline" class="menu"></ion-icon></div>
+        
+        <nav id="upper-op">
+            <ion-icon name="close-outline" class="close"></ion-icon>
+            <ul>
+               
+                <li id="mainlogo"><a href=""><img id="kfc_logo" src="./images/logo.svg" alt=""></a></li>
+                <li ><a href="">Menu</a> </li>
+                <li ><a href="">Carrers</a> </li>
+                <li ><a href="">About </a> </li>
+                <li ><a href="">Find a store</a> </li>
+                
+            </ul>
+        </nav>
+        
+            <nav id="section2">
+                <div id="btn1">
+                    <button>Start Order</button>
+                </div>
+                
+                <ul>
+                    <li><a href=""><img class="shop" src="./images/person.svg" alt="loginlogo"></a></li>
+                    <hr>
+                    <li><a href=""><img class="shop" src="./images/bag.svg" alt="cart"></a></li>
+                </ul></nav>
+              
+    </header>
+    <div id="location">
+        <a href=""><img src="./images/location.png" alt="location"></a>
+        <p>Start an Order for Pickup and Delivery</p>
+    </div>
+    <div
+    id="kfcimg">
+        <img src="https://images.ctfassets.net/wtodlh47qxpt/2Ns4Nh6oLG77MPIRWUAprF/3993e3b6d0bed8e513cb74fb4baf252a/Chicken_Roll_1440x396px.jpg?w=1536&fit=fill&fm=webp" alt="kfcdisplay">
+        <div id="path2">
+            <img src="./images/kfc.png" alt="">
+            <DIV id="heading">
+                <h1>WELCOME TO KFC!</h1>
+               </DIV>
+           </div>
+           
+           
+    </div>
+    
+</body>
+
+</html>
+<script src="home.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
